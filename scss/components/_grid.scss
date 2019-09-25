@@ -28,6 +28,10 @@ main {
     width: 95vw;
 }
 
+#timezone {
+    width:100%;
+}
+
 
 @include media-query($desktop-view){
     .grid-container {
@@ -61,3 +65,4 @@ main {
         width: 45vw;
     }
 }
+
