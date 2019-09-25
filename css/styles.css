@@ -304,9 +304,17 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  font-family: 'Lato', sans-serif;
+  color: #777; }
+
+a {
+  text-decoration: none; }
+
 .bell-alert {
-  width: 2em;
-  height: 2em; }
+  width: 1.5em;
+  height: 1em;
+  margin-right: .5em; }
   .bell-alert-path {
     fill: #FFFFFF;
     stroke-width: 1; }
@@ -363,13 +371,37 @@ header {
   align-items: center; }
 
 header h1 {
-  flex: 2; }
+  flex: 2;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em; }
 header svg {
   flex: 2 0px; }
 header img {
   border-radius: 50%;
-  height: 2em;
-  width: 2em; }
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 1em;
+  margin-left: .5em; }
+header h3 {
+  color: #fff;
+  font-weight: 200;
+  font-size: .75em; }
+header .img-profile {
+  height: 1em;
+  border-left: 5px solid #777;
+  border-width: 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em; }
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 /*
 * CSS TOGGLE SWITCH

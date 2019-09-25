@@ -1,9 +1,11 @@
 
 .bell-alert{
-    width:2em;
-    height:2em;
+    width:1.5em;
+    height:1em;
     &-path{
         fill:#FFFFFF;
         stroke-width: 1
     }
+    margin-right: .5em;
+
 }
