@@ -412,7 +412,14 @@ header .img-profile {
 .alert-banner {
   background-color: #927bc1;
   width: 90%;
-  margin: auto; }
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .alert-banner-message {
+    margin-left: 5px; }
+  .alert-banner-close {
+    margin: 0 5px 10px 0px; }
   .alert-banner strong, .alert-banner p {
     color: #fff; }
 

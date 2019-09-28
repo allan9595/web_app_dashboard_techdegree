@@ -2,7 +2,19 @@
     background-color: $lilac-bush;
     width: 90%;
     margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    &-message{
+        margin-left: 5px;
+    }
+  
+    &-close{
+        margin: 0 5px 10px 0px;
+    }
     strong, p{
         color: $white
     }
+    
 }
