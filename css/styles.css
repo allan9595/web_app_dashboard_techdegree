@@ -403,6 +403,19 @@ header .img-profile {
   justify-content: space-between;
   align-items: center; }
 
+.main-header-search {
+  border: 1px solid #777;
+  border-radius: 5px;
+  width: 90%;
+  margin: auto; }
+
+.alert-banner {
+  background-color: #927bc1;
+  width: 90%;
+  margin: auto; }
+  .alert-banner strong, .alert-banner p {
+    color: #fff; }
+
 /*
 * CSS TOGGLE SWITCH
 *
