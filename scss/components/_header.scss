@@ -11,6 +11,7 @@ header {
         color: $white;
         font-weight: 400;
         font-size: 1em; 
+        margin-left: 5px;
     }
     svg{
         flex: 2 0px;
@@ -46,5 +47,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+}
 
+@include media-query($desktop-view){
+    .main-header{
+        grid-column: 1 / span 2;
+    }
 }

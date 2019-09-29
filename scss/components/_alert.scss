@@ -1,6 +1,6 @@
 .alert-banner{
     background-color: $lilac-bush;
-    width: 90%;
+    width: 95%;
     margin:auto;
     display: flex;
     flex-direction: row;
@@ -16,5 +16,16 @@
     strong, p{
         color: $white
     }
-    
+    border-radius: 5px;
+}
+
+
+@include media-query($desktop-view){
+    .alert-banner{
+        justify-content: space-between;    
+    }
+    .alert{
+        display: grid;
+        grid-column: 1 / span 2;
+    }
 }

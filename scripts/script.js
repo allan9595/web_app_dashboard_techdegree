@@ -132,3 +132,7 @@ send.addEventListener('click', () => {
         alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+//message textarea cursor configure
+
+$('textarea').prop('selectionEnd', 1)

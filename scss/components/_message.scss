@@ -1,0 +1,34 @@
+.widget-container{
+    input{
+        width:100%;
+        box-sizing: border-box;
+        padding: 12px 20px;
+        height: 50px;
+        margin: 8px 0;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        background-color: $white;
+    }
+
+    textarea{
+        width: 100%;
+        box-sizing: border-box;
+        background-color: $white;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        margin: 1em 0 1em 0;
+        height: 200px;
+        padding: 12px 20px;
+    }
+
+    button{
+        width:100%;
+        padding: 12px 20px;
+        background-color: $lilac-bush;
+        border-radius: 5px;
+        border: none;
+        box-sizing: border-box;
+        margin: 8px 0;
+        color: $white
+    }
+}

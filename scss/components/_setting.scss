@@ -1,0 +1,24 @@
+select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    background-color:$white;
+    border: none;
+    color: $grey; 
+    border-radius: 5px;
+    border: 1px solid $grey;
+}
+
+.settings-button{
+    button{
+        width:100%;
+        padding: 12px 20px;
+        background-color: $lilac-bush;
+        border-radius: 5px;
+        border: none;
+        box-sizing: border-box;
+        margin: 8px 0;
+        color: $white
+    }
+}

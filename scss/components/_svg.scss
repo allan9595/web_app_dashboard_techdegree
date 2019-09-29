@@ -9,3 +9,23 @@
     margin-right: .5em;
 
 }
+
+.social-image{
+    border: 5px solid $lilac-bush;
+    border-radius: 50%;
+    background: $lilac-bush;
+    width: 100px;
+    height:100px;
+    margin: auto;
+    svg{
+        width: 50%;
+        height: 50%;
+        transform: translate(0%, 50%);
+        path{
+            fill:$white;
+            stroke-width: 1
+        }
+    }
+    text-align: center;
+}
+
