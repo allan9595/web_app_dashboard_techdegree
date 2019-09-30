@@ -335,6 +335,14 @@ a {
       fill: #fff;
       stroke-width: 1; }
 
+.dashboard, .member, .visits, .setting {
+  width: 2em;
+  height: 2em;
+  margin: 10px; }
+  .dashboard-path, .member-path, .visits-path, .setting-path {
+    fill: #ccc;
+    stroke-width: 1; }
+
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
@@ -423,6 +431,28 @@ header .img-profile {
 @media (min-width: 768px) {
   .main-header {
     grid-column: 1 / span 2; } }
+nav {
+  background-color: #523aa6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+nav .active {
+  border-bottom: 2px solid #00ff1d; }
+  nav .active svg g g path {
+    fill: #fff; }
+
+a:hover .dashboard-path, a:hover .member-path, a:hover .visits-path, a:hover .setting-path {
+  fill: #fff; }
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: column;
+    justify-content: flex-start; }
+    nav .active {
+      border-bottom: none;
+      border-left: 2px solid #00ff1d; } }
 .main-header-search {
   border: 1px solid #777;
   border-radius: 5px; }
@@ -467,6 +497,13 @@ section {
 
   .fa-search {
     text-align: right; } }
+@media (min-width: 768px) and (min-width: 768px) {
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .social .social-container {
+      margin: 20px auto auto auto; } }
 .alert-banner {
   background-color: #927bc1;
   width: 95%;
@@ -553,7 +590,23 @@ select {
   box-sizing: border-box;
   margin: 8px 0;
   color: #fff; }
+.settings-button .button-disabled {
+  background-color: #777; }
 
+@media (min-width: 768px) {
+  .settings-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .settings-button button {
+      width: 100%;
+      padding: 12px 20px;
+      background-color: #927bc1;
+      border-radius: 5px;
+      border: none;
+      box-sizing: border-box;
+      margin: 10px;
+      color: #fff; } }
 /*
 * CSS TOGGLE SWITCH
 *
@@ -1132,5 +1185,9 @@ select {
 .switch-ios.switch-light > span {
   width: 30%;
   margin: 10px 0; }
+
+@media (min-width: 768px) {
+  .switch-ios.switch-light > span {
+    width: 15%; } }
 
 /*# sourceMappingURL=styles.css.map */

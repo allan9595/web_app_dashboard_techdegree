@@ -29,3 +29,13 @@
     text-align: center;
 }
 
+.dashboard, .member, .visits, .setting{
+    width:2em;
+    height:2em;
+    margin: 10px;
+    &-path{
+        fill:$very-light-grey;
+        stroke-width: 1
+    }
+}
+

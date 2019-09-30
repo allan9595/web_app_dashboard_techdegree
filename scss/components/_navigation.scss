@@ -1,0 +1,40 @@
+nav{
+    background-color: $navbarcolor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    .active{
+        border-bottom: 2px solid $navlinkcolor;
+        svg{
+            g{
+                g{
+                    path{
+                        fill:$white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+a:hover{
+    .dashboard-path, .member-path, .visits-path, .setting-path{
+        fill:$white;
+    }
+}
+
+@include media-query($desktop-view){
+    
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        .active{
+            border-bottom: none;
+            border-left: 2px solid $navlinkcolor;
+        }
+    }
+}

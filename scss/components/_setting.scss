@@ -21,4 +21,26 @@ select{
         margin: 8px 0;
         color: $white
     }
+
+    .button-disabled{
+        background-color: $grey;
+    }
+}
+
+@include media-query($desktop-view){
+    .settings-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button{
+            width:100%;
+            padding: 12px 20px;
+            background-color: $lilac-bush;
+            border-radius: 5px;
+            border: none;
+            box-sizing: border-box;
+            margin: 10px;
+            color: $white
+        }
+    }
 }

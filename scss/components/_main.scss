@@ -54,5 +54,16 @@ section {
 
     .fa-search {
         text-align: right;
-      }
+    }
+
+    @include media-query($desktop-view){
+        .social{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .social-container{
+                margin: 20px auto auto auto;
+            }
+        }
+    }
 }

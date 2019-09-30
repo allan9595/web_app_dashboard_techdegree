@@ -136,3 +136,12 @@ send.addEventListener('click', () => {
 //message textarea cursor configure
 
 $('textarea').prop('selectionEnd', 1)
+
+//navbar link active 
+
+$('a').each((index, element) => {
+    $(element).click(() => {
+        $('a').removeClass('active');
+        $(element).addClass('active');
+    });
+})

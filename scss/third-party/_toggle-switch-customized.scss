@@ -2,3 +2,9 @@
     width: 30%;
     margin: 10px 0;
 }
+
+@include media-query($desktop-view){
+    .switch-ios.switch-light > span{
+        width: 15%;
+    }
+}
