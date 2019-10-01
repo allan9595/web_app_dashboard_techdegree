@@ -53,5 +53,17 @@ header {
 @include media-query($desktop-view){
     .main-header{
         grid-column: 1 / span 2;
+        width: 95%;
+        margin:auto;
+        &-search{
+            input{
+                width:100%;
+                padding: 12px 20px;
+                border-radius: 5px;
+                border: none;
+                box-sizing: border-box;
+                color: $white
+            }
+        }
     }
 }

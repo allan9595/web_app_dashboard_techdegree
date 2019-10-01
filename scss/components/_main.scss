@@ -21,6 +21,19 @@
     }
 }
 
+.traffic-header{
+    .traffic-nav{
+        .active{
+            border: 1px solid $chartbarcolor;
+            border-radius: 20px;
+            padding: 10px;
+            background: $chartbarcolor;
+            color: $white;
+        }
+    }
+}
+
+
 section {
     width: 95%;
     margin: auto;
@@ -46,6 +59,15 @@ section {
 }
 
 @include media-query($desktop-view){
+    .traffic-header{
+        .traffic-nav{
+            &-link{
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+    
+
     .main-header-search{
         justify-content: space-between;
         display: flex;
@@ -54,16 +76,22 @@ section {
 
     .fa-search {
         text-align: right;
+        margin-top: 10px;
+        margin-right: 10px;
     }
 
-    @include media-query($desktop-view){
-        .social{
+    
+    .social{
+        div:nth-child(2){
+            margin: 40px 60px 40px 60px;;
+        }
+        &-container{
+            margin:40px 60px 40px 60px;
+        }
+        &-outer-container{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            .social-container{
-                margin: 20px auto auto auto;
-            }
         }
     }
 }

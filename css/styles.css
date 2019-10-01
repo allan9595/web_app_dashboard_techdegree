@@ -430,7 +430,16 @@ header .img-profile {
 
 @media (min-width: 768px) {
   .main-header {
-    grid-column: 1 / span 2; } }
+    grid-column: 1 / span 2;
+    width: 95%;
+    margin: auto; }
+    .main-header-search input {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 5px;
+      border: none;
+      box-sizing: border-box;
+      color: #fff; } }
 nav {
   background-color: #523aa6;
   display: flex;
@@ -472,6 +481,13 @@ a:hover .dashboard-path, a:hover .member-path, a:hover .visits-path, a:hover .se
     .traffic-header .traffic-nav-link {
       margin: 0 5px 0 0; }
 
+.traffic-header .traffic-nav .active {
+  border: 1px solid #11d455;
+  border-radius: 20px;
+  padding: 10px;
+  background: #11d455;
+  color: #fff; }
+
 section {
   width: 95%;
   margin: auto;
@@ -490,20 +506,27 @@ section {
     margin: 0 0 100px 0; }
 
 @media (min-width: 768px) {
+  .traffic-header .traffic-nav-link {
+    margin: 0 20px 0 0; }
+
   .main-header-search {
     justify-content: space-between;
     display: flex;
     flex-basis: 35%; }
 
   .fa-search {
-    text-align: right; } }
-@media (min-width: 768px) and (min-width: 768px) {
-  .social {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px; }
+
+  .social div:nth-child(2) {
+    margin: 40px 60px 40px 60px; }
+  .social-container {
+    margin: 40px 60px 40px 60px; }
+  .social-outer-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
-    .social .social-container {
-      margin: 20px auto auto auto; } }
+    justify-content: space-around; } }
 .alert-banner {
   background-color: #927bc1;
   width: 95%;
@@ -535,6 +558,26 @@ section {
   .members-container a {
     color: #927bc1; }
 
+@media (min-width: 768px) {
+  .members {
+    margin: 0 auto;
+    width: 90%; }
+
+  .members-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    margin: 0 0 20px 0; }
+    .members-container img {
+      width: 50px;
+      height: 50px; }
+
+  .members-text {
+    width: 60%;
+    flex-grow: 2;
+    margin-left: 10px; } }
 .activity-container {
   text-align: center; }
   .activity-container img {
@@ -542,6 +585,20 @@ section {
     height: 80px;
     border-radius: 50%; }
 
+@media (min-width: 768px) {
+  .activity-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left; }
+    .activity-container img {
+      width: 50px;
+      height: 50px; }
+
+  .activity-text {
+    width: 50%;
+    flex-grow: 2;
+    margin-left: 10px; } }
 .widget-container input {
   width: 100%;
   box-sizing: border-box;

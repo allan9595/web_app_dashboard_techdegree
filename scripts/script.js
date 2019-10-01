@@ -23,17 +23,36 @@ alert.addEventListener('click', e => {
     }
 });
 
-let trafficData = {
+let trafficDataWeekly = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
-        data: [0, 750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+        data: [700, 750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
         2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
 };
 
+let trafficDataDaily = {
+    labels: ["16", "17", "18", "19", "20", "21", "22"],
+    datasets: [{
+        data: [400, 700, 600, 800, 1000, 300, 1500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+let trafficDataHourly= {
+    labels: ["00:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00","7:00", "8:00",
+    "9:00","10:00","11:00", "12:00"
+    ],
+    datasets: [{
+        data: [400, 700, 600, 800, 1000, 300, 1500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
@@ -53,9 +72,11 @@ let trafficOptions = {
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
+    data: trafficDataWeekly,
     options: trafficOptions
 });
+
+
 
 
 // data for daily traffic bar chart
@@ -143,5 +164,29 @@ $('a').each((index, element) => {
     $(element).click(() => {
         $('a').removeClass('active');
         $(element).addClass('active');
+    });
+})
+
+
+//add interaction for the chart clicking options
+
+$('li').each((index, element) => {
+    $(element).click((e) => {
+        $('li').removeClass('active');
+        $(element).addClass('active');
+        if($(e.target).text() === 'Daily'){
+            new Chart(trafficCanvas, {
+                type: 'line',
+                data: trafficDataDaily,
+                options: trafficOptions
+            });
+        }else if($(e.target).text() === 'Weekly'){
+            new Chart(trafficCanvas, {
+                type: 'line',
+                data: trafficDataWeekly,
+                options: trafficOptions
+            });
+        }
+        
     });
 })
