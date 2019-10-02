@@ -312,11 +312,11 @@ a {
   text-decoration: none; }
 
 .bell-alert {
-  width: 1.5em;
-  height: 1em;
+  width: 1.7em;
+  height: 1.7em;
   margin-right: .5em; }
   .bell-alert-path {
-    fill: #FFFFFF;
+    fill: #ccc;
     stroke-width: 1; }
 
 .social-image {
@@ -402,6 +402,24 @@ header h1 {
   margin-left: 5px; }
 header svg {
   flex: 2 0px; }
+header a:hover .bell-alert-path {
+  fill: #fff; }
+header .badge1 {
+  position: relative; }
+header .badge1[data-badge]:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  font-size: 7px;
+  background: #11d455;
+  color: white;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333; }
 header img {
   border-radius: 50%;
   height: 1.5em;
@@ -475,7 +493,7 @@ a:hover .dashboard-path, a:hover .member-path, a:hover .visits-path, a:hover .se
   .traffic-header .traffic-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     list-style-type: none; }
     .traffic-header .traffic-nav-link {
@@ -484,7 +502,7 @@ a:hover .dashboard-path, a:hover .member-path, a:hover .visits-path, a:hover .se
 .traffic-header .traffic-nav .active {
   border: 1px solid #11d455;
   border-radius: 20px;
-  padding: 10px;
+  padding: 2px;
   background: #11d455;
   color: #fff; }
 
@@ -508,6 +526,8 @@ section {
 @media (min-width: 768px) {
   .traffic-header .traffic-nav-link {
     margin: 0 20px 0 0; }
+  .traffic-header .traffic-nav .active {
+    padding: 20px; }
 
   .main-header-search {
     justify-content: space-between;

@@ -9,10 +9,11 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
+   
     .traffic-nav{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         list-style-type: none;
         &-link{
@@ -26,7 +27,7 @@
         .active{
             border: 1px solid $chartbarcolor;
             border-radius: 20px;
-            padding: 10px;
+            padding: 2px;
             background: $chartbarcolor;
             color: $white;
         }
@@ -63,6 +64,9 @@ section {
         .traffic-nav{
             &-link{
                 margin: 0 20px 0 0;
+            }
+            .active{
+                padding: 20px;
             }
         }
     }

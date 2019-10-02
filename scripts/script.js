@@ -27,6 +27,7 @@ let trafficDataWeekly = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
     "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
+        label: '# of Hits',
         data: [700, 750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
         2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
@@ -35,9 +36,10 @@ let trafficDataWeekly = {
 };
 
 let trafficDataDaily = {
-    labels: ["16", "17", "18", "19", "20", "21", "22"],
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
-        data: [400, 700, 600, 800, 1000, 300, 1500],
+        label: '# of Hits',
+        data: [75, 115, 175, 125, 225, 200, 100],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
@@ -45,14 +47,34 @@ let trafficDataDaily = {
 
 let trafficDataHourly= {
     labels: ["00:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00","7:00", "8:00",
-    "9:00","10:00","11:00", "12:00"
+    "9:00","10:00","11:00", "12:00","13:00","14:00", "15:00", "16:00", "17:00","18:00",
+    "19:00", "20:00", "21:00","22:00", "23:00"
     ],
     datasets: [{
-        data: [400, 700, 600, 800, 1000, 300, 1500],
+        label: '# of Hits',
+        data: [30, 40, 70, 100, 120, 140, 150, 120, 60, 80, 90, 100, 110, 120,
+            130, 200, 90, 150, 90, 100, 120, 130, 70, 120
+        ],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
 };
+
+let trafficDataMonthly= {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug"
+        ,"Sep", "Oct", "Nov", "Dec"
+    ],
+    datasets: [{
+        label: '# of Hits',
+        data: [
+            "20000", "30000", "50000", "10000", "20000", "30000","10000", "20000",
+            "30000", "40000", "50000","30000"
+        ],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
@@ -141,9 +163,10 @@ let mobileChart = new Chart(mobileCanvas, {
 });
 
 //message section
-send.addEventListener('click', () => {
+send.addEventListener('click', (e) => {
     // ensure user and message fields are filled out
     if (user.value === "" && message.value === "") {
+        e.preventDefault();
         alert("Please fill out user and message fields before sending");
     } else if (user.value === "" ) {
         alert("Please fill out user field before sending");
@@ -186,7 +209,22 @@ $('li').each((index, element) => {
                 data: trafficDataWeekly,
                 options: trafficOptions
             });
+        }else if($(e.target).text() === 'Hourly'){
+            new Chart(trafficCanvas, {
+                type: 'line',
+                data: trafficDataHourly,
+                options: trafficOptions
+            });
+        }else{
+            new Chart(trafficCanvas, {
+                type: 'line',
+                data: trafficDataMonthly,
+                options: trafficOptions
+            });
         }
         
     });
 })
+
+
+//add drop down menu for the alert bell portion
