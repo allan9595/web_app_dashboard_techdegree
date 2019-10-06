@@ -19,6 +19,7 @@ header {
     //add hover after the svg 
     a:hover{
         .bell-alert-path{
+            transition: 0.5s;
             fill:$white;
         }
     }
@@ -40,6 +41,11 @@ header {
         border-radius:50%;
         box-shadow:0 0 1px #333;
      }
+
+     .badge1.changed:after {
+        display: none;
+     }
+    
     img{
         border-radius: 50%;
         height: 1.5em;
@@ -74,7 +80,56 @@ header {
     
 }
 
+#notification{
+    display: none;
+    position:absolute;
+    
+}
+
+.dropdown-content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: $coral;
+    width: 260px;
+    margin-left: -100px;
+    position:relative;
+    opacity: 0.9;
+    a{
+        padding:10px 0;
+        width:100%;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
 @include media-query($desktop-view){
+    .dropdown-content{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 400px;
+        margin-left: -300px;
+        position:relative;
+        opacity: 0.9;
+        border-radius: 10px;
+        a{
+            color: $very-light-grey;
+            border: $white solid 1px;
+            background-color: $navbarcolor;
+        }
+        a:hover{
+            transition: 1s;
+            background-color: $coral;
+            border: $white solid 3px;
+            padding:20px 0;
+            width:100%;
+            color: $white;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+
     .main-header{
         grid-column: 1 / span 2;
         width: 95%;

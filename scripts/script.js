@@ -5,7 +5,7 @@ const mobileCanvas = document.getElementById("mobile-chart");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
-
+const alertBell = document.getElementById("badge1");
 // create the html for the banner
 alert.innerHTML =
     `
@@ -19,7 +19,7 @@ alert.innerHTML =
 alert.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+        alert.style.display = "none"
     }
 });
 
@@ -228,3 +228,11 @@ $('li').each((index, element) => {
 
 
 //add drop down menu for the alert bell portion
+//inspired from https://stackoverflow.com/questions/17788990/access-the-css-after-selector-with-jquery
+
+$('#badge1').click(() => {
+    $('#notification').toggle();
+    //$("#badge1").attr("data-badge", "");
+    $("#badge1").addClass("changed");
+})
+

@@ -403,6 +403,7 @@ header h1 {
 header svg {
   flex: 2 0px; }
 header a:hover .bell-alert-path {
+  transition: 0.5s;
   fill: #fff; }
 header .badge1 {
   position: relative; }
@@ -420,6 +421,8 @@ header .badge1[data-badge]:after {
   line-height: 15px;
   border-radius: 50%;
   box-shadow: 0 0 1px #333; }
+header .badge1.changed:after {
+  display: none; }
 header img {
   border-radius: 50%;
   height: 1.5em;
@@ -446,7 +449,49 @@ header .img-profile {
   justify-content: space-between;
   align-items: center; }
 
+#notification {
+  display: none;
+  position: absolute; }
+
+.dropdown-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #fd7856;
+  width: 260px;
+  margin-left: -100px;
+  position: relative;
+  opacity: 0.9; }
+  .dropdown-content a {
+    padding: 10px 0;
+    width: 100%;
+    color: #fff;
+    text-decoration: none; }
+
 @media (min-width: 768px) {
+  .dropdown-content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    margin-left: -300px;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 10px; }
+    .dropdown-content a {
+      color: #ccc;
+      border: #fff solid 1px;
+      background-color: #523aa6; }
+    .dropdown-content a:hover {
+      transition: 1s;
+      background-color: #fd7856;
+      border: #fff solid 3px;
+      padding: 20px 0;
+      width: 100%;
+      color: #fff;
+      text-decoration: none;
+      text-align: center; }
+
   .main-header {
     grid-column: 1 / span 2;
     width: 95%;
