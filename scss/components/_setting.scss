@@ -28,7 +28,9 @@ select{
 }
 
 @include media-query($desktop-view){
-    
+    .settings{
+        width: 90%;
+    }
     .settings-button{
         display: flex;
         flex-direction: row;

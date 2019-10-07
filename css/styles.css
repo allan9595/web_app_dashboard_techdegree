@@ -1493,11 +1493,26 @@ section {
   .social div:nth-child(2) {
     margin: 40px 60px 40px 60px; }
   .social-container {
-    margin: 40px 60px 40px 60px; }
+    background: #ede7e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 40px 60px 40px 60px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    height: 200px; }
   .social-outer-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; } }
+    justify-content: space-around; }
+  .social-image {
+    margin-left: 40px; }
+
+  .widget-container-full {
+    width: 100%; }
+
+  .daily, .mobile {
+    width: 90%; } }
 .alert-banner {
   background-color: #927bc1;
   width: 95%;
@@ -1598,6 +1613,9 @@ section {
   margin: 8px 0;
   color: #fff; }
 
+@media (min-width: 768px) {
+  .message {
+    width: 90%; } }
 select {
   width: 100%;
   padding: 12px 20px;
@@ -1622,6 +1640,9 @@ select {
   background-color: #777; }
 
 @media (min-width: 768px) {
+  .settings {
+    width: 90%; }
+
   .settings-button {
     display: flex;
     flex-direction: row;

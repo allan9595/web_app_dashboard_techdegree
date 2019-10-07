@@ -1,3 +1,4 @@
+
 .widget-container{
     input{
         width:100%;
@@ -31,4 +32,10 @@
         margin: 8px 0;
         color: $white
     }  
+}
+
+@include media-query($desktop-view){
+    .message{
+        width: 90%;
+    }
 }

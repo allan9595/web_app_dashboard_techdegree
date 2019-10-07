@@ -59,7 +59,10 @@ section {
     text-align: center;
 }
 
+
+
 @include media-query($desktop-view){
+   
     .traffic-header{
         .traffic-nav{
             &-link{
@@ -87,15 +90,33 @@ section {
     
     .social{
         div:nth-child(2){
-            margin: 40px 60px 40px 60px;;
+            margin: 40px 60px 40px 60px;
         }
         &-container{
+            background: $light-grey;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
             margin:40px 60px 40px 60px;
+            border: 1px solid $black;
+            border-radius: 5px;
+            height: 200px;
         }
         &-outer-container{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
+        &-image{
+            margin-left: 40px;
+        }
+    }
+
+    .widget-container-full{
+        width: 100%;
+    }
+
+    .daily, .mobile{
+        width: 90%;
     }
 }
