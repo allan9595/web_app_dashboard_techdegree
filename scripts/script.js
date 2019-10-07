@@ -245,15 +245,10 @@ $('#badge1').click(() => {
 //autocomplete
 //https://github.com/pawelczak/EasyAutocomplete
 const options = {
-	data: [ "Isa Kline",
-    "Ari Hendrix", 
-   "Reem Hopper", 
-   "Zayyan Nava", 
-    "Toyah Sheridan", 
-   "Rebeca Rush", 
-    "Bhavik Hume", 
-   "Jago Noel", 
-   "Lyla Goddard"],
+	data: [ "Victoria Chambers",
+    "Dale Byrd", 
+   "Dawn Wood", 
+   "Dan Oliver"],
 	list: {
 		match: {
 			enabled: true
