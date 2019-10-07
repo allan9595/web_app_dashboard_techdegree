@@ -6,6 +6,11 @@ const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 const alertBell = document.getElementById("badge1");
+
+const toggleSwitchOne = document.querySelectorAll('input[type="checkbox"]')[0];
+const toggleSwitchTwo = document.querySelectorAll('input[type="checkbox"]')[1];
+
+const timezoneInput = document.getElementById('timezone');
 // create the html for the banner
 alert.innerHTML =
     `
@@ -166,14 +171,13 @@ let mobileChart = new Chart(mobileCanvas, {
 send.addEventListener('click', (e) => {
     // ensure user and message fields are filled out
     if (user.value === "" && message.value === "") {
-        e.preventDefault();
-        alert("Please fill out user and message fields before sending");
+        window.alert("Please fill out user and message fields before sending");
     } else if (user.value === "" ) {
-        alert("Please fill out user field before sending");
+        window.alert("Please fill out user field before sending");
     } else if (message.value === "" ) {
-        alert("Please fill out message field before sending");
+        window.alert("Please fill out message field before sending");
     } else {
-        alert(`Message successfully sent to: ${user.value}`);
+        window.alert(`Message successfully sent to: ${user.value}`);
     }
 });
 
@@ -236,3 +240,64 @@ $('#badge1').click(() => {
     $("#badge1").addClass("changed");
 })
 
+
+
+//autocomplete
+//https://github.com/pawelczak/EasyAutocomplete
+const options = {
+	data: [ "Isa Kline",
+    "Ari Hendrix", 
+   "Reem Hopper", 
+   "Zayyan Nava", 
+    "Toyah Sheridan", 
+   "Rebeca Rush", 
+    "Bhavik Hume", 
+   "Jago Noel", 
+   "Lyla Goddard"],
+	list: {
+		match: {
+			enabled: true
+		}
+	}
+};
+$('#userField').easyAutocomplete(options);
+
+if(JSON.parse(localStorage.getItem('toggleSwitchOne')) === true){
+    toggleSwitchOne.checked = true;
+}else{
+    toggleSwitchOne.checked = false;
+}
+
+if(JSON.parse(localStorage.getItem("toggleSwitchTwo")) === true){
+    toggleSwitchTwo.checked = true;
+}else{
+    toggleSwitchTwo.checked = false;
+}
+
+toggleSwitchOne.addEventListener('change', () => {
+    if(this.checked){
+        console.log(toggleSwitchOne.checked);
+        localStorage.setItem("toggleSwitchOne",toggleSwitchOne.checked);
+    }else{
+        console.log(toggleSwitchOne.checked);
+        localStorage.setItem("toggleSwitchOne",toggleSwitchOne.checked);
+    }
+})
+
+toggleSwitchTwo.addEventListener('change', () => {
+    if(this.checked){
+        localStorage.setItem("toggleSwitchTwo",toggleSwitchTwo.checked);
+    }else{
+        localStorage.setItem("toggleSwitchTwo",toggleSwitchTwo.checked);
+    }
+})
+
+
+if(localStorage.getItem('timezone')){
+    timezoneInput.value = localStorage.getItem('timezone');
+}
+
+//local storage for the timezone
+timezoneInput.addEventListener('change', () => {
+    localStorage.setItem('timezone',timezoneInput.value);
+})

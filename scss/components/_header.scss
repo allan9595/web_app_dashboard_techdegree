@@ -19,7 +19,7 @@ header {
     //add hover after the svg 
     a:hover{
         .bell-alert-path{
-            transition: 0.5s;
+            transition: 0.5s; 
             fill:$white;
         }
     }
@@ -98,8 +98,19 @@ header {
     a{
         padding:10px 0;
         width:100%;
+        color: $very-light-grey;
+        text-decoration: none;
+        background-color: $navbarcolor;
+    }
+    a:hover{
+        transition: 1s;
+        background-color: $coral;
+        border: $white solid 3px;
+        padding:20px 0;
+        width:100%;
         color: $white;
         text-decoration: none;
+        text-align: center;
     }
 }
 
@@ -141,7 +152,7 @@ header {
                 border-radius: 5px;
                 border: none;
                 box-sizing: border-box;
-                color: $white
+                color: $black
             }
         }
     }
