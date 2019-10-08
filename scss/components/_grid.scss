@@ -33,8 +33,6 @@ main {
 }
 
 
-
-
 @include media-query($desktop-view){
     .grid-container {
         grid-template-columns: 55px 1fr;

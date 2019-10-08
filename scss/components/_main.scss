@@ -4,6 +4,7 @@
 }
 
 .traffic-header{
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,8 +43,8 @@ section {
 }
 
 .social{
-    div:nth-child(2){
-        margin: 0 auto;
+    &-outer-container{
+        flex-wrap: wrap; //wrap the flex container to control its width
     }
 }
 
@@ -89,18 +90,16 @@ section {
 
     
     .social{
-        div:nth-child(2){
-            margin: 40px 60px 40px 60px;
-        }
         &-container{
             background: $light-grey;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin:40px 60px 40px 60px;
+            margin:auto;
             border: 1px solid $black;
             border-radius: 5px;
-            height: 200px;
+            height: 100px;
+            padding: 0 30px;
         }
         &-outer-container{
             display: flex;
@@ -108,15 +107,19 @@ section {
             justify-content: space-around;
         }
         &-image{
-            margin-left: 40px;
+            margin-right: 10px;
         }
+        &-text{
+            margin-left: 5px;
+            p:nth-child(1){
+                font-size: 15px;
+                margin-top: 15px;
+            }
+            p:nth-child(2){
+                font-size: 25px;
+            }
+        }
+       
     }
-
-    .widget-container-full{
-        width: 100%;
-    }
-
-    .daily, .mobile{
-        width: 90%;
-    }
+    
 }
